@@ -1,0 +1,37 @@
+<div class="animated fadeIn">
+  <div *ngFor="let item of msgLs" class="card">
+    <div class="card-header">
+      {{item.author.username}}
+      <div class="card-header-actions">
+        {{item.timestamp}}
+      </div>
+    </div>
+    <div class="card-body">
+      <p>
+        {{item.content}}
+      </p>
+      
+
+      <div *ngIf="!!item.referenced_message" class="card">
+        <div class="card-header">
+          Trả lời cho {{item.referenced_message.author.username}}
+          <div class="card-header-actions">
+            {{item.referenced_message.timestamp}}
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            {{item.referenced_message.content}}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row align-items-center mb-4">
+    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+      <button type="button" class="btn btn-block btn-primary" (click)="getListMsg()">Xem thêm</button>
+    </div>
+  </div>
+</div>

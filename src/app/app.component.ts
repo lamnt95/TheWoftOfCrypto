@@ -3,17 +3,19 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { IconSetService } from '@coreui/icons-angular';
 import { freeSet } from '@coreui/icons';
+import { DiscordService } from "./WoftCrypto/services/Discorsd"
 
 @Component({
   // tslint:disable-next-line
   selector: 'body',
   template: '<router-outlet></router-outlet>',
-  providers: [IconSetService],
+  providers: [IconSetService, DiscordService],
 })
 export class AppComponent implements OnInit {
   constructor(
     private router: Router,
-    public iconSet: IconSetService
+    public iconSet: IconSetService,
+    public discordService: DiscordService,
   ) {
     // iconSet singleton
     iconSet.icons = { ...freeSet };
@@ -26,5 +28,7 @@ export class AppComponent implements OnInit {
       }
       window.scrollTo(0, 0);
     });
+
+   
   }
 }
