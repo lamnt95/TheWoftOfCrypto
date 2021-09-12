@@ -2,24 +2,49 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'WoftCrypto',
-    icon: 'icon-speedometer',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    },
+    name: 'CoinF',
+    icon: 'icon-puzzle',
+    // url: "/coinf",
     children: [
       {
-        name: 'CoinF',
+        name: 'Avax',
         icon: 'icon-puzzle',
-        url: "/coinf",
-        children: [
-          {
-            name: 'Avax',
-            icon: 'icon-puzzle',
-            url: "/coinfdiscordavax"
-          }
-        ]
+        url: "/coinfdiscordavax"
+      },
+      {
+        name: 'Solana',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscordsol"
+      },
+      {
+        name: 'PolkaDot',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscorddot"
+      },
+      {
+        name: 'Near',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscordnear"
+      },
+      {
+        name: 'Terra',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscordterra"
+      },
+      {
+        name: 'Polygon',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscordpolygon"
+      },
+      {
+        name: 'BSC',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscordbsc"
+      },
+      {
+        name: 'ICP',
+        icon: 'icon-puzzle',
+        url: "/coinfdiscordicp"
       }
     ]
   },

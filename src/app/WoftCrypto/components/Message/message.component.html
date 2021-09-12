@@ -1,4 +1,14 @@
 <div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      Danh sách Admin
+    </div>
+    <span  class="card-body">
+      <span *ngFor="let data of adList" class="mr-4 ml-4">{{data.username}}</span>
+    </span>
+  </div>
+
+
   <div *ngFor="let item of msgLs" class="card">
     <div class="card-header">
       {{item.author.username}}
@@ -10,7 +20,7 @@
       <p>
         {{item.content}}
       </p>
-      
+
 
       <div *ngIf="!!item.referenced_message" class="card">
         <div class="card-header">

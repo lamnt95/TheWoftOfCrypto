@@ -62,6 +62,62 @@ export const routes: Routes = [
           channel: "coinfdiscordavax"
         }
       },
+      {
+        path: 'coinfdiscordsol',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ Solana',
+          channel: "coinfdiscordsol"
+        }
+      },
+      {
+        path: 'coinfdiscorddot',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ Dot',
+          channel: "coinfdiscorddot"
+        }
+      },
+      {
+        path: 'coinfdiscordnear',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ Near',
+          channel: "coinfdiscordnear"
+        }
+      },
+      {
+        path: 'coinfdiscordterra',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ Terra',
+          channel: "coinfdiscordterra"
+        }
+      },
+      {
+        path: 'coinfdiscordpolygon',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ Polygon',
+          channel: "coinfdiscordpolygon"
+        }
+      },
+      {
+        path: 'coinfdiscordbsc',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ BSC',
+          channel: "coinfdiscordbsc"
+        }
+      },
+      {
+        path: 'coinfdiscordicp',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ ICP',
+          channel: "coinfdiscordicp"
+        }
+      },
       // =================================
 
       {

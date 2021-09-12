@@ -18,6 +18,7 @@ export class MessageComponent {
   lastMsgId: any;
   cnIdReal: any;
   adIdReadList: any[];
+  adList: any[];
 
   constructor(
     public discordService: DiscordService,
@@ -31,6 +32,8 @@ export class MessageComponent {
       console.log(res);
       const channel = _.get(res, "channel");
       this.cnIdReal = this.databaseService.getCnId(channel)
+      this.adList = this.databaseService.getAdLs(this.cnIdReal);
+      console.log(this.adList)
       this.getListMsg();
 
     })
