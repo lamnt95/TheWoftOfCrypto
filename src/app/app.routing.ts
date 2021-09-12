@@ -9,7 +9,11 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { Coingecko } from './WoftCrypto/components/Coingecko/coingecko.component';
+import { DefilamaComponent } from './WoftCrypto/components/Defilama/defilama.component';
+import { DefiPulseComponent } from './WoftCrypto/components/DefiPulse/defipulse.component';
 import { MessageComponent } from './WoftCrypto/components/Message/message.component';
+import { TheBlockComponent } from './WoftCrypto/components/TheBlockData/theblock.component';
 
 export const routes: Routes = [
   {
@@ -54,6 +58,38 @@ export const routes: Routes = [
     children: [
 
       // =================================
+      {
+        path: 'dappradar',
+        component: Coingecko,
+        data: {
+          title: 'DappRadar Gaming NFT',
+          channel: "dappradar"
+        }
+      },
+      {
+        path: 'defilama',
+        component: DefilamaComponent,
+        data: {
+          title: 'Check TVL Defilama',
+          channel: "defilama"
+        }
+      },
+      {
+        path: 'theblockdata',
+        component: TheBlockComponent,
+        data: {
+          title: 'Data Onchain',
+          channel: "theblockdata"
+        }
+      },
+      {
+        path: 'defipulse',
+        component: DefiPulseComponent,
+        data: {
+          title: 'Check TVL ETH',
+          channel: "defipulse"
+        }
+      },
       {
         path: 'coinfdiscordavax',
         component: MessageComponent,

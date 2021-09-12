@@ -2,9 +2,29 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
+    name: 'Data Onchain',
+    icon: 'icon-puzzle',
+    url: "/theblockdata",
+  },
+  {
+    name: 'Check TVL ETH',
+    icon: 'icon-puzzle',
+    url: "/defipulse",
+  },
+  {
+    name: 'Check TVL',
+    icon: 'icon-puzzle',
+    url: "/defilama",
+  },
+  {
+    name: 'DappRadar Game',
+    icon: 'icon-puzzle',
+    url: "/dappradar",
+  },
+  {
     name: 'CoinF',
     icon: 'icon-puzzle',
-    // url: "/coinf",
+    url: "/coinf",
     children: [
       {
         name: 'Avax',
