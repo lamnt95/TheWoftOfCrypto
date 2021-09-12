@@ -3,12 +3,25 @@ import { INavData } from '@coreui/angular';
 export const navItems: INavData[] = [
   {
     name: 'WoftCrypto',
-    url: '/woftcrypto',
     icon: 'icon-speedometer',
     badge: {
       variant: 'info',
       text: 'NEW'
-    }
+    },
+    children: [
+      {
+        name: 'CoinF',
+        icon: 'icon-puzzle',
+        url: "/coinf",
+        children: [
+          {
+            name: 'Avax',
+            icon: 'icon-puzzle',
+            url: "/coinfdiscordavax"
+          }
+        ]
+      }
+    ]
   },
   {
     name: 'Develop',

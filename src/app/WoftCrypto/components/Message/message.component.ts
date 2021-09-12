@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DiscordMsg } from '../../models/DiscordMsg';
 import { DiscordService } from '../../services/Discorsd';
 import { DatabaseService } from '../../services/Database';
+import { Router, ActivatedRoute } from '@angular/router';
 import * as _ from "lodash";
 import * as moment from "moment";
 
@@ -21,11 +22,18 @@ export class MessageComponent {
   constructor(
     public discordService: DiscordService,
     public databaseService: DatabaseService,
+    private route: ActivatedRoute
   ) {
   }
 
   ngOnInit() {
-    this.getListMsg();
+    this.route.data.subscribe(res => {
+      console.log(res);
+      const channel = _.get(res, "channel");
+      this.cnIdReal = this.databaseService.getCnId(channel)
+      this.getListMsg();
+
+    })
   }
 
   loadMore() {
@@ -33,7 +41,7 @@ export class MessageComponent {
   }
 
   async getListMsg() {
-    this.cnIdReal = "879220174262243369";
+    if (this.cnIdReal == null || this.cnIdReal == undefined) return;
     this.adIdReadList = this.databaseService.getAd(this.cnIdReal);
 
     try {

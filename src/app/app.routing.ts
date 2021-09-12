@@ -52,6 +52,18 @@ export const routes: Routes = [
       title: 'Home'
     },
     children: [
+
+      // =================================
+      {
+        path: 'coinfdiscordavax',
+        component: MessageComponent,
+        data: {
+          title: 'Discord CoinF - Hệ Avax',
+          channel: "coinfdiscordavax"
+        }
+      },
+      // =================================
+
       {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
@@ -67,13 +79,6 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
-      },
-      {
-        path: 'woftcrypto',
-        component: MessageComponent,
-        data: {
-          title: 'woftcrypto'
-        }
       },
       {
         path: 'icons',
@@ -97,7 +102,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
