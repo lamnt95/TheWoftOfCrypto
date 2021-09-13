@@ -13,6 +13,7 @@ import { Coingecko } from './WoftCrypto/components/Coingecko/coingecko.component
 import { DefilamaComponent } from './WoftCrypto/components/Defilama/defilama.component';
 import { DefiPulseComponent } from './WoftCrypto/components/DefiPulse/defipulse.component';
 import { MessageComponent } from './WoftCrypto/components/Message/message.component';
+import { Tele } from './WoftCrypto/components/Tele/tele.component';
 import { TheBlockComponent } from './WoftCrypto/components/TheBlockData/theblock.component';
 
 export const routes: Routes = [
@@ -58,6 +59,14 @@ export const routes: Routes = [
     children: [
 
       // =================================
+      {
+        path: 'telechatcoinf',
+        component: Tele,
+        data: {
+          title: 'Tele chat CoinF',
+          channel: "telechatcoinf"
+        }
+      },
       {
         path: 'dappradar',
         component: Coingecko,

@@ -22,7 +22,19 @@ export const navItems: INavData[] = [
     url: "/dappradar",
   },
   {
-    name: 'CoinF',
+    name: 'Tele VN',
+    icon: 'icon-puzzle',
+    url: "/televn",
+    children: [
+      {
+        name: 'Chat CoinF',
+        icon: 'icon-puzzle',
+        url: "/telechatcoinf"
+      },
+    ]
+  },
+  {
+    name: 'Discord CoinF',
     icon: 'icon-puzzle',
     url: "/coinf",
     children: [

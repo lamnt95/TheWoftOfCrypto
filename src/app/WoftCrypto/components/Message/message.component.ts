@@ -50,8 +50,10 @@ export class MessageComponent {
     try {
 
       for (let index = 0; index < 10; index++) {
-        const res = await this.discordService.getListMsg(this.cnIdReal, this.lastMsgId) || []
-        this.lastMsgId = _.get(_.last(res), "id");
+        const res = await this.discordService.getListMsg(this.cnIdReal, this.lastMsgId) 
+        let res2 = new Array();
+        res2.concat(res);
+        this.lastMsgId = _.get(_.last(res2), "id");
         const data = _.filter(res, (i: any = {}) => _.includes(this.adIdReadList, i.author.id))
         const data2 = _.map(data, (i: any = {}) => ({
           ...i, timestamp: moment(i.timestamp).format("DD/MM/YYYY hh:mm:ss"),
